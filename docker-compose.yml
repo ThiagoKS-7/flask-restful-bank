@@ -4,27 +4,15 @@ services:
   web:
     build: ./web
     ports: ["5100:5100"]
-<<<<<<< HEAD
     container_name: bank_flask-api
-=======
-    container_name: img-clasf_flask-api
->>>>>>> 17c5e00dd81eb92903ff44dd379a36304027fb13
     links: 
       - database
   database:
     build: ./database
-<<<<<<< HEAD
     container_name: bank_mongodb
-=======
-    container_name: img-clasf_mongodb
->>>>>>> 17c5e00dd81eb92903ff44dd379a36304027fb13
 networks:
   default:
     driver: bridge
     ipam:
       config:
-<<<<<<< HEAD
-        - subnet: 172.16.57.1/25
-=======
         - subnet: 172.16.57.0/24
->>>>>>> 17c5e00dd81eb92903ff44dd379a36304027fb13
